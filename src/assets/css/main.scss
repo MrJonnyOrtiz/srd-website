@@ -7,7 +7,7 @@
 @import '~bootstrap/scss/utilities';
 
 // to add custom colors, merge the maps
-// $theme-colors: map-merge($theme-colors, $custom-colors);
+$theme-colors: map-merge($theme-colors, $custom-colors);
 
 $green-100: tint-color($green, 80%);
 $green-200: tint-color($green, 60%);
@@ -21,6 +21,7 @@ $green-900: shade-color($green, 80%);
 
 $primary: $blue;
 $secondary: $gray-600;
+$tertiary: $white;
 $success: $green;
 $info: $cyan;
 $warning: $yellow;
