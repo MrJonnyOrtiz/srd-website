@@ -1,6 +1,7 @@
 // Example: custom color map
 $custom-colors: (
    'myWhite': white,
+   'myBlack': black,
 );
 
 // Example: custom widths
@@ -95,24 +96,11 @@ body {
    }
 }
 
-#services {
-   position: absolute;
-   top: 1200px;
+.bg {
    background-color: $black;
    color: $white;
 }
 
-#gallery {
-   position: absolute;
-   top: 2400px;
-}
-
-#contact {
-   position: absolute;
-   top: 3200px;
-}
-
-#blog {
-   position: absolute;
-   top: 4400px;
+.img-md {
+   width: 300px;
 }
