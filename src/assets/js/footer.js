@@ -13,7 +13,7 @@ export const myFooter = () => {
          '</p>' +
          '<p class="small text-muted mb-0">' +
          '&copy; Copyright 2021 Sarasota Remodeling And Design - All Rights Reserved.' +
-         '<a class="nav-link" href="https://cloudrealmllc.com" target="_blank" rel="noreferrer" rel="noopener">Powered by Cloud Realm LLC</a>.' +
+         '<a class="nav-link" href="https://cloudrealmllc.com" target="_blank" rel="noreferrer" rel="noopener">Powered by Cloud Realm LLC.</a>' +
          '</p>' +
          '</div>' +
          '<div class="col-lg-3 col-md-6 text-center">' +
