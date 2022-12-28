@@ -23,6 +23,8 @@
       "bootstrap-icons": "^1.9.1"
    },
    "devDependencies": {
+      "@parcel/packager-raw-url": "^2.8.2",
+      "@parcel/transformer-jsonld": "^2.8.2",
       "@parcel/transformer-sass": "^2.8.2",
       "parcel": "latest"
    }
