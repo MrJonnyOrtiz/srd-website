@@ -4,8 +4,8 @@
    "description": "",
    "source": "src/index.html",
    "scripts": {
-      "start": "parcel serve src/index.html --public-url / --dist-dir dist",
-      "build": "parcel build"
+      "start": "parcel",
+      "build": "parcel build src/index.html"
    },
    "repository": {
       "type": "git",
@@ -23,7 +23,7 @@
       "bootstrap-icons": "^1.9.1"
    },
    "devDependencies": {
-      "@parcel/transformer-sass": "^2.7.0",
-      "parcel": "^2.7.0"
+      "@parcel/transformer-sass": "^2.8.2",
+      "parcel": "latest"
    }
 }
