@@ -11,6 +11,9 @@ $fixed-widths: (
    3: 0.75rem,
 );
 
+// override h1 default size
+$h1-font-size: 1.75rem;
+
 // existing colors to customize
 $blue: #0d6efd;
 $indigo: #6610f2;

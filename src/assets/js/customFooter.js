@@ -8,7 +8,7 @@ export const myFooter = () => {
             '<div class="container py-4 bg">' +
             '<div class="row gy-4 gx-5">' +
             '<div class="col-lg-6 col-md-6">' +
-            '<h5 class="h3 text-white">Sarasota Remodeling & Design</h5>' +
+            '<h1 class="h1 text-white">Sarasota Remodeling & Design</h1>' +
             '<p class="small text-white">' +
             '5159 Oxford Drive, Sarasota, Florida 34242, United States.' +
             '<br />' +
