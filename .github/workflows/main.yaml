@@ -39,14 +39,14 @@ jobs:
            run: |
               for file in ${{ steps.changed-files.outputs.added_files }}; do
                 echo "$file was added"
-                aws s3 cp $file s3://${{ env.BUCKET_NAME }}/$file --acl public-read
+                aws s3 cp $file s3://${{ env.BUCKET_NAME }}/$file 
               done
 
          - name: process all changed files
            run: |
               for file in ${{ steps.changed-files.outputs.modified_files }}; do
                 echo "$file was modified"
-                aws s3 cp $file s3://${{ env.BUCKET_NAME }}/$file --acl public-read
+                aws s3 cp $file s3://${{ env.BUCKET_NAME }}/$file 
               done
               aws s3 rm s3://${{ env.BUCKET_NAME }}/.github/workflows/main.yaml
               aws cloudfront create-invalidation --distribution-id E1GAI381JAJQJU --paths "/*"
