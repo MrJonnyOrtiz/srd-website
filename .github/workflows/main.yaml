@@ -11,15 +11,19 @@ jobs:
       env:
          BUCKET_NAME: sarasotaremodeling.com
 
-      name: list and process files
+      name: build and deploy files
       steps:
          - uses: actions/checkout@v2
            with:
               fetch-depth: 0
+         - uses: actions/setup-node@v2
+           with:
+              node-version: 18
+         - run: npm ci
 
-         - name: get changed files
-           id: changed-files
-           uses: tj-actions/changed-files@v11.3
+         #  - name: get changed files
+         #    id: changed-files
+         #    uses: tj-actions/changed-files@v11.3
 
          # configure the gibhub runner w/ aws cli to get the aws access key and secret key in github settings
          - name: configure AWS CLI on runner
@@ -29,31 +33,40 @@ jobs:
               aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
               aws-region: us-east-1
 
-         - name: list all modified files
-           run: |
-              for file in ${{ steps.changed-files.outputs.all_modified_files }}; do
-                echo "$file was modified"
-              done
+         #  - name: list all modified files
+         #    run: |
+         #       for file in ${{ steps.changed-files.outputs.all_modified_files }}; do
+         #         echo "$file was modified"
+         #       done
 
-         - name: process all added files
-           run: |
-              for file in ${{ steps.changed-files.outputs.added_files }}; do
-                echo "$file was added"
-                aws s3 cp $file s3://${{ env.BUCKET_NAME }}/$file 
-              done
+         #  - name: process all added files
+         #    run: |
+         #       for file in ${{ steps.changed-files.outputs.added_files }}; do
+         #         echo "$file was added"
+         #         aws s3 cp $file s3://${{ env.BUCKET_NAME }}/$file
+         #       done
 
-         - name: process all changed files
+         #  - name: process all changed files
+         #    run: |
+         #       for file in ${{ steps.changed-files.outputs.modified_files }}; do
+         #         echo "$file was modified"
+         #         aws s3 cp $file s3://${{ env.BUCKET_NAME }}/$file
+         #       done
+         #       aws s3 rm s3://${{ env.BUCKET_NAME }}/.github/workflows/main.yaml
+         #       aws cloudfront create-invalidation --distribution-id E1GAI381JAJQJU --paths "/*"
+
+         #  - name: process all deleted files
+         #    run: |
+         #       for file in ${{ steps.changed-files.outputs.deleted_files }}; do
+         #         echo "$file was deleted"
+         #         aws s3 rm s3://${{ env.BUCKET_NAME }}/$file
+         #       done
+
+         - name: build website files
+           run: npm run build
+
+         - name: deploy website files
            run: |
-              for file in ${{ steps.changed-files.outputs.modified_files }}; do
-                echo "$file was modified"
-                aws s3 cp $file s3://${{ env.BUCKET_NAME }}/$file 
-              done
+              aws s3 cp ./dist/* s3://${{ env.BUCKET_NAME }}
               aws s3 rm s3://${{ env.BUCKET_NAME }}/.github/workflows/main.yaml
               aws cloudfront create-invalidation --distribution-id E1GAI381JAJQJU --paths "/*"
-
-         - name: process all deleted files
-           run: |
-              for file in ${{ steps.changed-files.outputs.deleted_files }}; do
-                echo "$file was deleted"
-                aws s3 rm s3://${{ env.BUCKET_NAME }}/$file
-              done
