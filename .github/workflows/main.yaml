@@ -67,6 +67,6 @@ jobs:
 
          - name: deploy website files
            run: |
-              aws s3 sync ./dist/ s3://<bucket-name> --delete
+              aws s3 sync dist/ s3://<bucket-name> --delete
               aws s3 rm s3://${{ env.BUCKET_NAME }}/.github/workflows/main.yaml
               aws cloudfront create-invalidation --distribution-id E1GAI381JAJQJU --paths "/*"
