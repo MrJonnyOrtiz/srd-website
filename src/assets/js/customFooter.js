@@ -10,7 +10,9 @@ export const myFooter = () => {
             '<div class="col-lg-6 col-md-6">' +
             '<h1 class="h1 text-white">Sarasota Remodeling & Design</h1>' +
             '<p class="small text-white">' +
-            '5159 Oxford Drive, Sarasota, Florida 34242, United States.' +
+            '5159 Oxford Drive' +
+            '<br />' +
+            'Sarasota, Florida 34242, United States.' +
             '<br />' +
             '<a class="nav-link" href="tel:9413130263">(941)313-0263</a>' +
             '<a class="nav-link" href="mailto:info@sarasotaremodeling.com">info@sarasotaremodeling.com</a>' +
