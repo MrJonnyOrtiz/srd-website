@@ -16,7 +16,9 @@ export const myFooter = () => {
             '<a class="nav-link" href="mailto:info@sarasotaremodeling.com">info@sarasotaremodeling.com</a>' +
             '</p>' +
             '<p class="small text-white mb-0">' +
-            '&copy; Copyright 2021 Sarasota Remodeling And Design - All Rights Reserved.' +
+            '&copy; Copyright ' +
+            new Date().getFullYear() +
+            ' Sarasota Remodeling And Design - All Rights Reserved.' +
             '<a class="nav-link" href="https://cloudrealmllc.com" target="_blank" rel="noreferrer" rel="noopener">Powered by Cloud Realm LLC.</a>' +
             '</p>' +
             '</div>' +
