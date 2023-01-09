@@ -48,6 +48,16 @@
             }
          }
       </script>
+
+      <!-- Google recaptcha -->
+      <script
+         src="https://www.google.com/recaptcha/api.js"
+         async
+         defer
+      ></script>
+
+      <!-- Jquery -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
    </head>
    <body>
       <div class="container">
@@ -116,30 +126,44 @@
                      </div>
                   </div>
 
-                  <!-- Message feature disabled, pending Lambda function
                   <div class="row">
                      <div class="col-sm">
                         <p class="fs-4">Message:</p>
-                        <form class="p-2">
+
+                        <!-- Contact form -->
+                        <div id="errorMessage"></div>
+                        <div id="successMessage"></div>
+                        <form
+                           class="p-2"
+                           action="https://w0aw93ohmg.execute-api.us-east-1.amazonaws.com/Prod"
+                           method="POST"
+                           id="contact-us-form"
+                        >
                            <div class="mb-2">
                               <label for="name" class="form-label"
-                                 >Full Name</label
+                                 >Your Full Name</label
                               >
+                              <span class="text-danger">*</span>
                               <input
                                  type="text"
                                  class="form-control"
                                  id="name"
+                                 name="name"
                                  aria-describedby="nameHelp"
+                                 placeholder="Full Name"
+                                 autocomplete="name"
                               />
                            </div>
                            <div class="mb-2">
                               <label for="email" class="form-label"
-                                 >Email address</label
+                                 >Your Email Address</label
                               >
+                              <span class="text-danger">*</span>
                               <input
                                  type="email"
                                  class="form-control"
                                  id="email"
+                                 name="email"
                                  aria-describedby="emailHelp"
                               />
                               <div id="emailHelp" class="form-text">
@@ -148,22 +172,33 @@
                            </div>
                            <div class="mb-2">
                               <label for="message" class="form-label"
-                                 >Message</label
+                                 >Your Message</label
                               >
+                              <span class="text-danger">*</span>
                               <textarea
-                                 type="text"
                                  class="form-control"
                                  id="message"
+                                 name="message"
                                  rows="4"
-                              />
+                              ></textarea>
                            </div>
-                           <button type="submit" class="btn btn-myBlack">
+
+                           <button
+                              type="submit"
+                              id="submitBtn"
+                              class="btn btn-myBlack g-recaptcha"
+                              data-sitekey="6LcaoNkjAAAAAOFAEh-K5p62Rh3T1V_zzb9lJ1wK"
+                              data-callback="recaptchaCB"
+                              disabled
+                           >
                               Send Message!
                            </button>
+                           <div>
+                              <span class="text-danger">* = required</span>
+                           </div>
                         </form>
                      </div>
                   </div>
-                  -->
                </div>
                <div class="col-sm">
                   <img
@@ -230,5 +265,68 @@
       </div>
 
       <script defer type="module" src="./assets/js/main.js"></script>
+
+      <script type="text/javascript">
+         'use strict';
+
+         var recaptchaCB = function (response) {
+            const submitBtn = document.querySelector('#submitBtn');
+            submitBtn.removeAttribute('disabled');
+
+            const body = {
+               name: $('#name').val(),
+               email: $('#email').val(),
+               message: $('#message').val(),
+               'g-recaptcha-response': $(
+                  "#contact-us-form textarea[name='g-recaptcha-response']"
+               ).val(),
+            };
+
+            let errorMessage = '';
+
+            // basic validation
+            const nameVal = /[A-Za-z]{1}[A-Za-z]/;
+
+            if ($('#name').val() == '') {
+               errorMessage += '<br>Name is empty';
+            } else {
+               if (!nameVal.test($('#name').val())) {
+                  errorMessage += '<br>Name cannot be less than 2 characters.';
+               }
+            }
+
+            const emailVal = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+            if ($('#email').val() === '' || !emailVal.test($('#email').val())) {
+               errorMessage += '<br>Invalid email address.';
+            }
+
+            if ($('#message').val() === '') {
+               errorMessage += '<br>Message cannot be empty.';
+            }
+
+            if (errorMessage !== '') {
+               $('#errorMessage').html(
+                  '<div class="alert alert-danger" role="alert"><strong>Error:</strong>' +
+                     errorMessage +
+                     '<p class="text-danger">Please <a href="./contact.html" class="alert-link">refresh</a> and try again.</p>' +
+                     '</div>'
+               );
+            } else {
+               $('#errorMessage').css('display', 'none');
+               $('#successMessage').html(
+                  '<div class="alert alert-success" role="alert"> <strong>Thank you for your message!</strong></div>'
+               );
+               $.post(
+                  $('#contact-us-form').attr('action'),
+                  JSON.stringify(body),
+                  function (data) {
+                     $('#contact-us-form button').hide();
+                     $('.text-danger').hide();
+                  },
+                  'json'
+               );
+            }
+         };
+      </script>
    </body>
 </html>
