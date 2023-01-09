@@ -9,7 +9,3 @@ myFooter();
 // Import modal
 import { myModal } from './customModal';
 myModal();
-
-// Import handleContactUs
-// import { handleContactUs } from './contactUs';
-// handleContactUs();
