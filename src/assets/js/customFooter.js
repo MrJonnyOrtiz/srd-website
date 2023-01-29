@@ -9,7 +9,7 @@ export const myFooter = () => {
             '<div class="row gy-4 gx-5">' +
             '<!-- SRD CONTACT INFO -->' +
             '<!-- SHOW ONLY WHEN XS -->' +
-            '<div class="col-xs-1 d-block d-sm-none text-center">' +
+            '<div class="col-sm-1 d-block d-sm-none text-center">' +
             '<h1 class="h1 text-white">Sarasota Remodeling & Design</h1>' +
             '<p class="small text-white">' +
             '5159 Oxford Drive' +
@@ -19,7 +19,7 @@ export const myFooter = () => {
             '<a class="nav-link" href="tel:9413130263">(941)313-0263</a>' +
             '<a class="nav-link" href="mailto:info@sarasotaremodeling.com">info@sarasotaremodeling.com</a>' +
             '</p>' +
-            '<p class="small text-white mb-0">' +
+            '<p class="small text-white mb-3">' +
             '&copy; Copyright ' +
             new Date().getFullYear() +
             ' Sarasota Remodeling And Design - All Rights Reserved.' +
@@ -37,7 +37,7 @@ export const myFooter = () => {
             '<a class="nav-link" href="tel:9413130263">(941)313-0263</a>' +
             '<a class="nav-link" href="mailto:info@sarasotaremodeling.com">info@sarasotaremodeling.com</a>' +
             '</p>' +
-            '<p class="small text-white mb-0">' +
+            '<p class="small text-white mb-3">' +
             '&copy; Copyright ' +
             new Date().getFullYear() +
             ' Sarasota Remodeling And Design - All Rights Reserved.' +
