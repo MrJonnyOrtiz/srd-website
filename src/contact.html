@@ -303,10 +303,6 @@
       <script type="text/javascript">
          'use strict';
 
-         $('a.nav-link.dropdown-toggle').click(function () {
-            location.href = this.href;
-         });
-
          var recaptchaCB = function (response) {
             const submitBtn = document.querySelector('#submitBtn');
             submitBtn.removeAttribute('disabled');
