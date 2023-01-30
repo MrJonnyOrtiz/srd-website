@@ -28,6 +28,8 @@
       ./assets/media/SRDfavicon.png"
       />
       <link rel="stylesheet" type="text/css" href="./assets/css/main.scss" />
+      <!-- Jquery -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
       <title>Sarasota Remodeling And Design - Blog</title>
    </head>
    <body>
@@ -232,5 +234,12 @@
       </div>
 
       <script defer type="module" src="./assets/js/main.js"></script>
+      <script>
+         $(document).ready(function () {
+            $('a.nav-link.dropdown-toggle').click(function () {
+               location.href = this.href;
+            });
+         });
+      </script>
    </body>
 </html>
