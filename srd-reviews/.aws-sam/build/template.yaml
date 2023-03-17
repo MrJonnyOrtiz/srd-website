@@ -1,0 +1,130 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: srd-reviews
+Transform:
+- AWS::Serverless-2016-10-31
+Resources:
+  srdReviewsGetAllItemsFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: src/handlers/srd-reviews-get-all-items.getAllItemsHandler
+      Runtime: nodejs16.x
+      Architectures:
+      - x86_64
+      MemorySize: 128
+      Timeout: 100
+      Description: A simple example includes a HTTP get method to get all items from
+        a DynamoDB table.
+      Policies:
+      - DynamoDBCrudPolicy:
+          TableName:
+            Ref: ReviewsTable
+      Environment:
+        Variables:
+          SAMPLE_TABLE:
+            Ref: ReviewsTable
+      Events:
+        Api:
+          Type: Api
+          Properties:
+            Path: /
+            Method: GET
+      CodeUri: srdReviewsGetAllItemsFunction
+    Metadata:
+      SamResourceId: srdReviewsGetAllItemsFunction
+  srdReviewsGetByIdFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: src/handlers/srd-reviews-get-by-id.getByIdHandler
+      Runtime: nodejs16.x
+      Architectures:
+      - x86_64
+      MemorySize: 128
+      Timeout: 100
+      Description: A simple example includes a HTTP get method to get one item by
+        id from a DynamoDB table.
+      Policies:
+      - DynamoDBCrudPolicy:
+          TableName:
+            Ref: ReviewsTable
+      Environment:
+        Variables:
+          SAMPLE_TABLE:
+            Ref: ReviewsTable
+      Events:
+        Api:
+          Type: Api
+          Properties:
+            Path: /{id}
+            Method: GET
+      CodeUri: srdReviewsGetByIdFunction
+    Metadata:
+      SamResourceId: srdReviewsGetByIdFunction
+  srdReviewsPutItemFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: src/handlers/srd-reviews-put-item.putItemHandler
+      Runtime: nodejs16.x
+      Architectures:
+      - x86_64
+      MemorySize: 128
+      Timeout: 100
+      Description: A simple example includes a HTTP post method to add one item to
+        a DynamoDB table.
+      Policies:
+      - DynamoDBCrudPolicy:
+          TableName:
+            Ref: ReviewsTable
+      - SNSPublishMessagePolicy:
+          TopicName:
+            Fn::GetAtt:
+            - srdReviewsSNSTopic
+            - TopicName
+      Environment:
+        Variables:
+          SAMPLE_TABLE:
+            Ref: ReviewsTable
+      Events:
+        Api:
+          Type: Api
+          Properties:
+            Path: /
+            Method: POST
+      CodeUri: srdReviewsPutItemFunction
+    Metadata:
+      SamResourceId: srdReviewsPutItemFunction
+  ReviewsTable:
+    Type: AWS::Serverless::SimpleTable
+    Properties:
+      PrimaryKey:
+        Name: id
+        Type: String
+      ProvisionedThroughput:
+        ReadCapacityUnits: 2
+        WriteCapacityUnits: 2
+  srdReviewsSNSTopic:
+    Type: AWS::SNS::Topic
+    Properties:
+      TopicName: srd-reviews-topic
+  srdReviewsSNSTopicPolicy:
+    Type: AWS::SNS::TopicPolicy
+    Properties:
+      PolicyDocument:
+        Id: srd-reviews-topic
+        Version: '2012-10-17'
+        Statement:
+        - Sid: srd-reviews-topic-notifications
+          Effect: Allow
+          Principal:
+            Service:
+            - cloudwatch.amazonaws.com
+            - cloudtrail.amazonaws.com
+          Action: sns:Publish
+          Resource:
+            Ref: srdReviewsSNSTopic
+      Topics:
+      - Ref: srdReviewsSNSTopic
+Outputs:
+  WebEndpoint:
+    Description: API Gateway endpoint URL for Prod stage
+    Value:
+      Fn::Sub: https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/

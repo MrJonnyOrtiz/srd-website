@@ -1,10 +1,10 @@
-@import './variables';
+@import "./variables";
 
-@import '~bootstrap/scss/functions';
-@import '~bootstrap/scss/variables';
-@import '~bootstrap/scss/maps';
-@import '~bootstrap/scss/mixins';
-@import '~bootstrap/scss/utilities';
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/maps";
+@import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/utilities";
 
 // to add custom colors, merge the maps
 $theme-colors: map-merge($theme-colors, $custom-colors);
@@ -29,6 +29,6 @@ $danger: $red;
 $light: $gray-100;
 $dark: $gray-900;
 
-@import './utilities';
+@import "./utilities";
 
-@import '~bootstrap/scss/bootstrap';
+@import "~bootstrap/scss/bootstrap";
