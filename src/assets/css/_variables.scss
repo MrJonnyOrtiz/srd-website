@@ -74,6 +74,13 @@ body {
    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
+#landing {
+   background-image: url(../media/RinglingBridge.webp);
+   background-repeat: no-repeat;
+   background-size: cover;
+   height: 100vh;
+}
+
 .logo {
    width: 120px;
 }
@@ -114,4 +121,95 @@ body {
       display: block;
       margin-top: 0;
    }
+}
+
+.openingTag {
+   transform: scale(0.8);
+   animation: scale 10s forwards cubic-bezier(0.5, 1, 0.89, 1);
+}
+
+@keyframes scale {
+   100% {
+      transform: scale(1);
+   }
+}
+
+.slowReveal {
+   display: inline-block;
+   opacity: 0;
+   color: white;
+   filter: blur(4px);
+}
+
+.slowReveal:nth-child(1) {
+   animation: fade-in 3s 0.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+.slowReveal:nth-child(2) {
+   animation: fade-in 3s 1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+.slowReveal:nth-child(3) {
+   animation: fade-in 3s 1.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+.slowReveal:nth-child(4) {
+   animation: fade-in 3s 2s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+.slowReveal:nth-child(5) {
+   animation: fade-in 3s 2.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+.slowReveal:nth-child(6) {
+   animation: fade-in 7s 10s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+.slowReveal:nth-child(7) {
+   animation: fade-in 7s 10.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+.slowReveal:nth-child(8) {
+   animation: fade-in 7s 11s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+.slowReveal:nth-child(9) {
+   animation: fade-in 7s 11.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+.slowReveal:nth-child(10) {
+   animation: fade-in 7s 12s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+.slowReveal:nth-child(11) {
+   animation: fade-in 15s 20s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+.slowReveal:nth-child(12) {
+   animation: fade-in 15s 20.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+.slowReveal:nth-child(12) {
+   animation: fade-in 15s 21s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+@keyframes fade-in {
+   from {
+      line-height: 200px;
+   }
+   to {
+      line-height: 25px;
+   }
+   100% {
+      opacity: 1;
+      filter: blur(0);
+   }
+}
+
+#h1Landing {
+   color: white;
+}
+
+#landingFooter {
+   position: fixed;
+   bottom: 0;
+   height: 1.5rem; /* Height of the footer */
+   width: 100%;
+   color: white;
+}
+
+.btn-myWhite:hover {
+   transform: scale(1.05);
 }

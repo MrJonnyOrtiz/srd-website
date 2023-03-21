@@ -49,13 +49,48 @@
       </script>
    </head>
    <body>
-      <div class="container">
+      <div class="container-fluid" id="landing">
+         <div class="row align-items-center">
+            <div class="col">
+               <a class="navbar-brand" href="./index.html"
+                  ><img
+                     class="logo"
+                     src="../src/assets/media/SRDlogoBlack.png"
+                     loading="lazy"
+                     alt="Sarasota Remodeling and Design Logo"
+                  />
+                  <span class="h1 align-middle" id="h1Landing"
+                     >Sarasota Remodeling & Design</span
+                  ></a
+               >
+            </div>
+            <div class="col d-none d-sm-flex d-flex justify-content-end">
+               <a
+                  type="button"
+                  class="btn btn-myWhite ms-5 p-2"
+                  href="tel:9413130263"
+               >
+                  GET A FREE QUOTE!
+               </a>
+            </div>
+            <div class="col-sm-1 d-block d-sm-none text-center">
+               <a
+                  type="button"
+                  class="btn btn-myWhite p-2 m-2"
+                  href="tel:9413130263"
+               >
+                  GET A FREE QUOTE!
+               </a>
+            </div>
+         </div>
+
+         <!--
          <nav class="navbar navbar-expand-lg">
             <div class="container-fluid d-flex justify-content-center">
                <a class="navbar-brand" href="./index.html"
                   ><img
                      class="logo"
-                     src="../src/assets/media/SRDlogoWhite.png"
+                     src="../src/assets/media/SRDlogoBlack.png"
                      loading="lazy"
                      alt="Sarasota Remodeling and Design Logo"
                   />
@@ -74,24 +109,19 @@
                >
                   <span class="navbar-toggler-icon"></span>
                </button>
-               <a
-                  type="button"
-                  class="btn btn-myBlack ms-5 p-2"
-                  href="tel:9413130263"
-               >
-                  GET A FREE QUOTE!
-               </a>
                <div
                   class="collapse navbar-collapse flex-row justify-content-end"
                   id="navbarNavAltMarkup"
                >
                   <div class="navbar-nav">
                      <li class="nav-item">
-                        <a class="nav-link" href="./services.html">Services</a>
+                        <a class="nav-link link-myWhite" href="./services.html"
+                           >Services</a
+                        >
                      </li>
                      <li class="nav-item dropdown">
                         <a
-                           class="nav-link dropdown-toggle"
+                           class="nav-link link-myWhite dropdown-toggle"
                            href="./gallery.html"
                            role="button"
                            data-bs-toggle="dropdown"
@@ -134,26 +164,132 @@
                         </ul>
                      </li>
                      <li class="nav-item">
-                        <a class="nav-link" href="./testimonials.html"
+                        <a
+                           class="nav-link link-myWhite"
+                           href="./testimonials.html"
                            >Testimonials</a
                         >
                      </li>
                      <li class="nav-item">
-                        <a class="nav-link" href="./contact.html">Contact</a>
+                        <a class="nav-link link-myWhite" href="./contact.html"
+                           >Contact Us</a
+                        >
                      </li>
                      <li class="nav-item">
-                        <a class="nav-link" href="./blog.html">Blog</a>
+                        <a class="nav-link link-myWhite" href="./blog.html"
+                           >Blog</a
+                        >
                      </li>
                   </div>
                </div>
+               <a
+                  type="button"
+                  class="btn btn-myWhite ms-5 p-2"
+                  href="tel:9413130263"
+               >
+                  GET A FREE QUOTE!
+               </a>
             </div>
          </nav>
-         <div class="text-center p-2 bg">
-            <h2 class="bg-myBlack">
-               Unparalleled workmanship on every project.
+-->
+
+         <div class="text-center fst-italic p-2 openingTag mb-5">
+            <h2 class="p-2">
+               <span class="slowReveal">Unparalleled </span>
+               <span class="slowReveal">workmanship </span>
+               <span class="slowReveal">on </span>
+               <span class="slowReveal">every </span>
+               <span class="slowReveal">project.</span>
+            </h2>
+            <h2 class="p-2">
+               <span class="slowReveal">Top </span>
+               <span class="slowReveal">rated </span>
+               <span class="slowReveal">contractor </span>
+               <span class="slowReveal">in </span>
+               <span class="slowReveal">Sarasota.</span>
+            </h2>
+            <h2 class="p-2">
+               <span class="slowReveal">On </span>
+               <span class="slowReveal">time </span>
+               <span class="slowReveal">performance. </span>
             </h2>
          </div>
+         <div class="row text-center mt-5 pt-5">
+            <div class="col">
+               <a
+                  type="button"
+                  class="btn btn-myWhite m-3 p-5"
+                  href="./services.html"
+               >
+                  <span class="h2">Services</span>
+               </a>
+            </div>
+            <div class="col">
+               <a
+                  type="button"
+                  class="btn btn-myWhite dropdown-toggle m-3 p-5"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  href="./gallery.html"
+               >
+                  <span class="h2">Gallery</span>
+               </a>
+               <ul class="dropdown-menu">
+                  <li>
+                     <a class="dropdown-item" href="./kitchens.html"
+                        >Kitchens</a
+                     >
+                  </li>
+                  <li>
+                     <a class="dropdown-item" href="./baths.html">Baths</a>
+                  </li>
+                  <li>
+                     <a class="dropdown-item" href="./entertainment.html"
+                        >Entertainment Centers</a
+                     >
+                  </li>
+                  <li>
+                     <a class="dropdown-item" href="./outdoors.html"
+                        >Outdoors</a
+                     >
+                  </li>
+                  <li>
+                     <a class="dropdown-item" href="./flooring.html"
+                        >Flooring</a
+                     >
+                  </li>
+                  <li>
+                     <a class="dropdown-item" href="./otherAreas.html"
+                        >Other Areas</a
+                     >
+                  </li>
+               </ul>
+            </div>
+
+            <div class="col">
+               <a
+                  type="button"
+                  class="btn btn-myWhite m-3 pt-5 pb-5"
+                  href="./contact.html"
+               >
+                  <span class="h2">Contact Us</span>
+               </a>
+            </div>
+            <div class="col">
+               <a
+                  type="button"
+                  class="btn btn-myWhite m-3 p-5"
+                  href="./blog.html"
+               >
+                  <span class="h2">Blog</span>
+               </a>
+            </div>
+         </div>
+
+         <!--
          <div class="bg pb-3">
+
             <div
                id="carouselExampleFade"
                class="carousel slide carousel-fade"
@@ -161,6 +297,26 @@
             >
                <div class="carousel-inner">
                   <div class="carousel-item active">
+                     <picture>
+                        !-- 390 x 292.5 --
+                        <source
+                           media="(max-width: 390px)"
+                           srcset="./assets/media/b-1-390.webp"
+                        />
+                        !-- 576 x 432 --
+                        <source
+                           media="(max-width: 576px)"
+                           srcset="./assets/media/b-1-576.webp"
+                        />
+                        <img
+                           src="./assets/media/b-IMG_2441.webp"
+                           class="img-fluid rounded mx-auto d-block"
+                           loading="lazy"
+                           alt="beautiful bathroom remodel with free standing soaker tub and spacious open shower"
+                        />
+                     </picture>
+
+                     !--
                      <img
                         width="640"
                         height="360"
@@ -169,116 +325,226 @@
                         loading="lazy"
                         alt="beautiful bathroom remodel with free standing soaker tub and spacious open shower"
                      />
+                  --</div>
+                  <div class="carousel-item">
+                     <picture>
+                        !-- 390 x 292.5 --
+                        <source
+                           media="(max-width: 390px)"
+                           srcset="./assets/media/k-2-390.webp"
+                        />
+                        !-- 576 x 432 --
+                        <source
+                           media="(max-width: 576px)"
+                           srcset="./assets/media/k-2-576.webp"
+                        />
+                        <img
+                           src="./assets/media/k-IMG_2427.webp"
+                           loading="lazy"
+                           class="img-fluid rounded mx-auto d-block"
+                           alt="cozy kitchen island with built-in appliances perfectly positioned"
+                        />
+                     </picture>
                   </div>
                   <div class="carousel-item">
-                     <img
-                        width="640"
-                        height="360"
-                        src="./assets/media/k-IMG_2427.webp"
-                        loading="lazy"
-                        class="img-fluid rounded mx-auto d-block"
-                        alt="cozy kitchen island with built-in appliances perfectly positioned"
-                     />
+                     <picture>
+                        !-- 390 x 292.5 --
+                        <source
+                           media="(max-width: 390px)"
+                           srcset="./assets/media/k-3-390.webp"
+                        />
+                        !-- 576 x 432 --
+                        <source
+                           media="(max-width: 576px)"
+                           srcset="./assets/media/k-3-576.webp"
+                        />
+                        <img
+                           src="./assets/media/k-4205HigelAve-7c4189347ffc0031fe3496d6f0a65719l-w1124515428od-w1024_h768_x2.webp"
+                           loading="lazy"
+                           class="img-fluid rounded mx-auto d-block"
+                           alt="upscale kitchen remodel with contemporary cabinets, built-in cooktop with vent, pot filler, and double oven"
+                        />
+                     </picture>
                   </div>
                   <div class="carousel-item">
-                     <img
-                        width="640"
-                        height="360"
-                        src="./assets/media/k-4205HigelAve-7c4189347ffc0031fe3496d6f0a65719l-w1124515428od-w1024_h768_x2.webp"
-                        loading="lazy"
-                        class="img-fluid rounded mx-auto d-block"
-                        alt="upscale kitchen remodel with contemporary cabinets, built-in cooktop with vent, pot filler, and double oven"
-                     />
+                     <picture>
+                        !-- 390 x 292.5 --
+                        <source
+                           media="(max-width: 390px)"
+                           srcset="./assets/media/k-4-390.webp"
+                        />
+                        !-- 576 x 432 --
+                        <source
+                           media="(max-width: 576px)"
+                           srcset="./assets/media/k-4-576.webp"
+                        />
+                        <img
+                           src="./assets/media/k-4205HigelAve-7c4189347ffc0031fe3496d6f0a65719l-w2353229615od-w1024_h768_x2.webp"
+                           loading="lazy"
+                           class="img-fluid rounded mx-auto d-block"
+                           alt="upscale kitchen renovation with new contrasting island that has a vegetable sink and plenty of storage"
+                        />
+                     </picture>
                   </div>
                   <div class="carousel-item">
-                     <img
-                        width="640"
-                        height="360"
-                        src="./assets/media/k-4205HigelAve-7c4189347ffc0031fe3496d6f0a65719l-w2353229615od-w1024_h768_x2.webp"
-                        loading="lazy"
-                        class="img-fluid rounded mx-auto d-block"
-                        alt="upscale kitchen renovation with new contrasting island that has a vegetable sink and plenty of storage"
-                     />
+                     <picture>
+                        !-- 390 x 292.5 --
+                        <source
+                           media="(max-width: 390px)"
+                           srcset="./assets/media/k-5-390.webp"
+                        />
+                        !-- 576 x 432 --
+                        <source
+                           media="(max-width: 576px)"
+                           srcset="./assets/media/k-5-576.webp"
+                        />
+                        <img
+                           src="./assets/media/k-4205HigelAve-7c4189347ffc0031fe3496d6f0a65719l-w2712799767od-w1024_h768_x2.webp"
+                           loading="lazy"
+                           class="img-fluid rounded mx-auto d-block"
+                           alt="renovated butler's pantry with contemporary cabinets that looks out to the main dining room"
+                        />
+                     </picture>
                   </div>
                   <div class="carousel-item">
-                     <img
-                        width="640"
-                        height="360"
-                        src="./assets/media/k-4205HigelAve-7c4189347ffc0031fe3496d6f0a65719l-w2712799767od-w1024_h768_x2.webp"
-                        loading="lazy"
-                        class="img-fluid rounded mx-auto d-block"
-                        alt="renovated butler's pantry with contemporary cabinets that looks out to the main dining room"
-                     />
+                     <picture>
+                        !-- 390 x 292.5 --
+                        <source
+                           media="(max-width: 390px)"
+                           srcset="./assets/media/k-6-390.webp"
+                        />
+                        !-- 576 x 432 --
+                        <source
+                           media="(max-width: 576px)"
+                           srcset="./assets/media/k-6-576.webp"
+                        />
+                        <img
+                           src="./assets/media/k-4205HigelAve-7c4189347ffc0031fe3496d6f0a65719l-w3211054771od-w1024_h768_x2.webp"
+                           loading="lazy"
+                           class="img-fluid rounded mx-auto d-block"
+                           alt="upscale kitchen remodel with a large bar top counter and kitchen sink"
+                        />
+                     </picture>
                   </div>
                   <div class="carousel-item">
-                     <img
-                        width="640"
-                        height="360"
-                        src="./assets/media/k-4205HigelAve-7c4189347ffc0031fe3496d6f0a65719l-w3211054771od-w1024_h768_x2.webp"
-                        loading="lazy"
-                        class="img-fluid rounded mx-auto d-block"
-                        alt="upscale kitchen remodel with a large bar top counter and kitchen sink"
-                     />
+                     <picture>
+                        !-- 390 x 292.5 --
+                        <source
+                           media="(max-width: 390px)"
+                           srcset="./assets/media/k-7-390.webp"
+                        />
+                        !-- 576 x 432 --
+                        <source
+                           media="(max-width: 576px)"
+                           srcset="./assets/media/k-7-576.webp"
+                        />
+                        <img
+                           src="./assets/media/k-4205HigelAve-7c4189347ffc0031fe3496d6f0a65719l-w3579291092od-w1024_h768_x2.webp"
+                           loading="lazy"
+                           class="img-fluid rounded mx-auto d-block"
+                           alt="renovated butler's pantry with contemporary cabinets, sink, and built in wine fridge and plenty of storage"
+                        />
+                     </picture>
                   </div>
                   <div class="carousel-item">
-                     <img
-                        width="640"
-                        height="360"
-                        src="./assets/media/k-4205HigelAve-7c4189347ffc0031fe3496d6f0a65719l-w3579291092od-w1024_h768_x2.webp"
-                        loading="lazy"
-                        class="img-fluid rounded mx-auto d-block"
-                        alt="renovated butler's pantry with contemporary cabinets, sink, and built in wine fridge and plenty of storage"
-                     />
+                     <picture>
+                        !-- 390 x 292.5 --
+                        <source
+                           media="(max-width: 390px)"
+                           srcset="./assets/media/k-8-390.webp"
+                        />
+                        !-- 576 x 432 --
+                        <source
+                           media="(max-width: 576px)"
+                           srcset="./assets/media/k-8-576.webp"
+                        />
+                        <img
+                           src="./assets/media/k-4205HigelAve-7c4189347ffc0031fe3496d6f0a65719l-w399108462od-w1024_h768_x2.webp"
+                           loading="lazy"
+                           class="img-fluid rounded mx-auto d-block"
+                           alt="upscale kitchen renovation with new contrasting island, vegetable sink, built-in microwave, lots of drawers for storage plus seating for 2"
+                        />
+                     </picture>
                   </div>
                   <div class="carousel-item">
-                     <img
-                        width="640"
-                        height="360"
-                        src="./assets/media/k-4205HigelAve-7c4189347ffc0031fe3496d6f0a65719l-w399108462od-w1024_h768_x2.webp"
-                        loading="lazy"
-                        class="img-fluid rounded mx-auto d-block"
-                        alt="upscale kitchen renovation with new contrasting island, vegetable sink, built-in microwave, lots of drawers for storage plus seating for 2"
-                     />
+                     <picture>
+                        !-- 390 x 292.5 --
+                        <source
+                           media="(max-width: 390px)"
+                           srcset="./assets/media/k-9-390.webp"
+                        />
+                        !-- 576 x 432 --
+                        <source
+                           media="(max-width: 576px)"
+                           srcset="./assets/media/k-9-576.webp"
+                        />
+                        <img
+                           src="./assets/media/k-4205HigelAve-7c4189347ffc0031fe3496d6f0a65719l-w578663226od-w1024_h768_x2.webp"
+                           loading="lazy"
+                           class="img-fluid rounded mx-auto d-block"
+                           alt="another view of upscale kitchen renovation with new contrasting island, vegetable sink, built-in microwave, lots of drawers for storage plus seating for 2"
+                        />
+                     </picture>
                   </div>
                   <div class="carousel-item">
-                     <img
-                        width="640"
-                        height="360"
-                        src="./assets/media/k-4205HigelAve-7c4189347ffc0031fe3496d6f0a65719l-w578663226od-w1024_h768_x2.webp"
-                        loading="lazy"
-                        class="img-fluid rounded mx-auto d-block"
-                        alt="another view of upscale kitchen renovation with new contrasting island, vegetable sink, built-in microwave, lots of drawers for storage plus seating for 2"
-                     />
+                     <picture>
+                        !-- 390 x 292.5 --
+                        <source
+                           media="(max-width: 390px)"
+                           srcset="./assets/media/k-10-390.webp"
+                        />
+                        !-- 576 x 432 --
+                        <source
+                           media="(max-width: 576px)"
+                           srcset="./assets/media/k-10-576.webp"
+                        />
+                        <img
+                           src="./assets/media/k-4205HigelAve-7c4189347ffc0031fe3496d6f0a65719l-w778763962od-w1024_h768_x2.webp"
+                           loading="lazy"
+                           class="img-fluid rounded mx-auto d-block"
+                           alt="upscale kitchen renovation with eat-in kitchen that has a large table that seats 6"
+                        />
+                     </picture>
                   </div>
                   <div class="carousel-item">
-                     <img
-                        width="640"
-                        height="360"
-                        src="./assets/media/k-4205HigelAve-7c4189347ffc0031fe3496d6f0a65719l-w778763962od-w1024_h768_x2.webp"
-                        loading="lazy"
-                        class="img-fluid rounded mx-auto d-block"
-                        alt="upscale kitchen renovation with eat-in kitchen that has a large table that seats 6"
-                     />
+                     <picture>
+                        !-- 390 x 292.5 --
+                        <source
+                           media="(max-width: 390px)"
+                           srcset="./assets/media/k-11-390.webp"
+                        />
+                        !-- 576 x 432 --
+                        <source
+                           media="(max-width: 576px)"
+                           srcset="./assets/media/k-11-576.webp"
+                        />
+                        <img
+                           src="./assets/media/k-4205HigelAve-7c4189347ffc0031fe3496d6f0a65719l-w877188285od-w1024_h768_x2.webp"
+                           loading="lazy"
+                           class="img-fluid rounded mx-auto d-block"
+                           alt="wide angle view of upscale kitchen renovation showing new contrasting island with vegetable sink and seating for 2 as well as built in cook top with 8 burners, large vent, and pot filler"
+                        />
+                     </picture>
                   </div>
                   <div class="carousel-item">
-                     <img
-                        width="640"
-                        height="360"
-                        src="./assets/media/k-4205HigelAve-7c4189347ffc0031fe3496d6f0a65719l-w877188285od-w1024_h768_x2.webp"
-                        loading="lazy"
-                        class="img-fluid rounded mx-auto d-block"
-                        alt="wide angle view of upscale kitchen renovation showing new contrasting island with vegetable sink and seating for 2 as well as built in cook top with 8 burners, large vent, and pot filler"
-                     />
-                  </div>
-                  <div class="carousel-item">
-                     <img
-                        width="640"
-                        height="360"
-                        src="./assets/media/c-2022128-IMG_0448.webp"
-                        loading="lazy"
-                        class="img-fluid rounded mx-auto d-block"
-                        alt="modern stone accent wall with big screen tv and built in fireplace surrounded by floating shelves"
-                     />
+                     <picture>
+                        !-- 390 x 292.5 --
+                        <source
+                           media="(max-width: 390px)"
+                           srcset="./assets/media/e-12-390.webp"
+                        />
+                        !-- 576 x 432 --
+                        <source
+                           media="(max-width: 576px)"
+                           srcset="./assets/media/e-12-576.webp"
+                        />
+                        <img
+                           src="./assets/media/c-2022128-IMG_0448.webp"
+                           loading="lazy"
+                           class="img-fluid rounded mx-auto d-block"
+                           alt="modern stone accent wall with big screen tv and built in fireplace surrounded by floating shelves"
+                        />
+                     </picture>
                   </div>
                </div>
                <button
@@ -306,11 +572,39 @@
                   <span class="visually-hidden">Next</span>
                </button>
             </div>
+        
          </div>
-
+      -->
          <!-- Modal -->
+         <!--
          <div id="theFooter"></div>
+         -->
+         <footer id="landingFooter">
+            <div class="row">
+               <div class="col">
+                  <p class="text-start">
+                     Sarasota Remodeling and Design, LLC. Copyright &copy;
+                     <script>
+                        document.write(new Date().getFullYear());
+                     </script>
+                  </p>
+               </div>
+               <div class="col">
+                  <p class="text-end">
+                     Powered by:
+                     <a
+                        class="link-myWhite"
+                        href="https://cloudrealmllc.com"
+                        target="”_blank”"
+                        rel="”noopener"
+                        noreferrer”
+                        >Cloud Realm LLC</a
+                     >
+                  </p>
+               </div>
+            </div>
+         </footer>
       </div>
-      <script defer type="module" src="./assets/js/main.js"></script>
+      <script defer type="module" src="./assets/js/landing.js"></script>
    </body>
 </html>
