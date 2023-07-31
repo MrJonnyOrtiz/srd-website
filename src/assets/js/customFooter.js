@@ -12,7 +12,11 @@ export const myFooter = () => {
             '<div class="col-sm-1 d-block d-sm-none text-center">' +
             '<h1 class="h1 text-white">Sarasota Remodeling & Design</h1>' +
             '<p class="small text-white">' +
-            "5159 Oxford Drive" +
+            "<em>By appointment only:</em>" +
+            "<br />" +
+            "6130 Clark Center Ave" +
+            "<br />" +
+            "Unit 107" +
             "<br />" +
             "Sarasota, Florida 34242, United States." +
             "<br />" +
@@ -30,7 +34,11 @@ export const myFooter = () => {
             '<div class="col-lg-6 col-md-6 d-none d-sm-block">' +
             '<h1 class="h1 text-white">Sarasota Remodeling & Design</h1>' +
             '<p class="small text-white">' +
-            "5159 Oxford Drive" +
+            "<em>By appointment only:</em>" +
+            "<br />" +
+            "6130 Clark Center Ave" +
+            "<br />" +
+            "Unit 107" +
             "<br />" +
             "Sarasota, Florida 34242, United States." +
             "<br />" +
